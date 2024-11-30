@@ -12,11 +12,25 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-body{
-  background-image:url("C:/Users/divya/OneDrive/Documents/react/inotebook/src/background_abstract.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
+body {
+  background-image: url("C:/Users/divya/OneDrive/Documents/react/inotebook/src/background_abstract.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.loader {
+  border-width: 4px;
+  border-top-color: transparent;
+  border-style: solid;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,59 +1,100 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-            <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-blue-900 text-indigo-500 flex-shrink-0">
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <div className="flex items-center justify-center h-96">
+        <motion.div
+          className="text-center text-white"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl font-bold mb-4">
+            Welcome to Your Notebook App
+          </h1>
+          <p className="text-lg mb-6">
+            Organize your thoughts, track your progress, and stay productive
+            with ease.
+          </p>
+          <Link
+            to="/login"
+            className="px-6 py-3 bg-purple-800 rounded-full text-lg font-semibold hover:bg-purple-900 transition duration-300"
+          >
+            Get Started
+          </Link>
+        </motion.div>
+      </div>
 
-            </div>
-            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">clouDNote</h2>
-              <p className="leading-relaxed text-base font-semibold">
-                A Cloud Note App offers secure, cross-platform note-taking with user authentication and encrypted cloud storage. Users can effortlessly create, edit, and delete notes while ensuring data privacy and accessibility across devices. Features like real-time synchronization, search options, and collaboration enhance the user experience. Backup and versioning functionalities provide added security and data management capabilities.</p>
-              <a href="/" className="mt-3 text-indigo-500 inline-flex items-center">Learn More
+      {/* Features Section */}
+      <div className="py-20 bg-gradient-to-r  from-purple-900 via-transparent to-indigo-900">
+        <motion.div
+          className="container mx-auto text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl font-semibold text-white mb-10">Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <motion.div
+              className="bg-gradient-to-r from-purple-600 via-purple-800 to-indigo-600 p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-xl hover:rotate-2"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-4">
+                Organize Notes
+              </h3>
+              <p className="text-white">
+                Keep your notes organized with easy-to-navigate categories and
+                search functionality.
+              </p>
+            </motion.div>
 
-              </a>
-            </div>
+            <motion.div
+              className="bg-gradient-to-r from-purple-600 via-purple-800 to-indigo-600 p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-xl hover:rotate-2"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-4">
+                Sync Across Devices
+              </h3>
+              <p className="text-white">
+                Your notes are automatically synced across devices, ensuring you
+                can access them anywhere.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-r from-purple-600 via-purple-800 to-indigo-600 p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-xl hover:rotate-2"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-4">
+                Secure & Private
+              </h3>
+              <p className="text-white">
+                We prioritize your privacy and security to make sure your notes
+                stay safe.
+              </p>
+            </motion.div>
           </div>
-          <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
-              <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-              <a href="/" className="mt-3 text-indigo-500 inline-flex items-center">Learn More
+        </motion.div>
+      </div>
 
-              </a>
-            </div>
-            <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-blue-900 text-indigo-500 flex-shrink-0">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-                <circle cx="6" cy="6" r="3"></circle>
-                <circle cx="6" cy="18" r="3"></circle>
-                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-              </svg>
-            </div>
-          </div>
-          <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-            <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-blue-900 text-indigo-500 flex-shrink-0">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </div>
-            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">The 400 Blows</h2>
-              <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-              <a href="/" className="mt-3 text-indigo-500 inline-flex items-center">Learn More
-
-              </a>
-            </div>
-          </div>
-          <button className="flex mx-auto mt-20 text-white bg-blue-900 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+      {/* Footer Section */}
+      <div className="text-white py-8">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2024 CloudNote. All rights reserved.</p>
         </div>
-      </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

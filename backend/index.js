@@ -1,13 +1,26 @@
 
 const Connection=require("./db.js")
 const express=require("express")
+const cookieParser = require('cookie-parser');
 const Auth=require("./Routes/auth")
 const Notes=require("./Routes/notes")
 const  app=express()
 var cors = require('cors')
+app.use(cookieParser());
+const allowedOrigins = ['http://localhost:3005','http://localhost:3000']; // Add more origins as needed
 
- 
-app.use(cors())
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Check if the origin is in the allowed origins list
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // Access-Control-Allow-Credentials: true
+};
+app.use(cors(corsOptions));
 
 Connection()
  
