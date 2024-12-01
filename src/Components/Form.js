@@ -117,7 +117,7 @@ const Form = () => {
       {/* Welcome Section */}
       <div className="text-center mb-8">
         <h1 className="text-5xl md:text-4xl font-extrabold text-gradient bg-gradient-to-r from-blue-200 mb-10 to-purple-300 mb-6 tracking-tight text-transparent bg-clip-text drop-shadow-lg">
-          Welcome to Your Note-Taking App
+          Welcome to clouDNote
         </h1>
         <h2 className="text-xl md:text-xl text-gray-300 font-medium opacity-90 hover:opacity-100 transition-opacity duration-300">
           Stay organized and manage your tasks efficiently with a seamless

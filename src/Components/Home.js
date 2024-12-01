@@ -40,7 +40,7 @@ const Home = () => {
           <h2 className="text-3xl font-semibold text-white mb-10">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <motion.div
-              className="bg-gradient-to-r from-purple-600 via-purple-800 to-indigo-600 p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-xl hover:rotate-2"
+              className="bg-gradient-to-r hover:p-12 from-purple-600 via-purple-800 to-indigo-600 p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-xl hover:rotate-2"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
