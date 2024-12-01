@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/clouDNote--A-MERN-notebook-app/static/css/main.aa728616.css",
+    "main.js": "/clouDNote--A-MERN-notebook-app/static/js/main.f987bf1c.js",
+    "static/js/787.4b05f94a.chunk.js": "/clouDNote--A-MERN-notebook-app/static/js/787.4b05f94a.chunk.js",
+    "static/media/background_abstract.jpg": "/clouDNote--A-MERN-notebook-app/static/media/background_abstract.eb48bc182ccfa75a320c.jpg",
+    "index.html": "/clouDNote--A-MERN-notebook-app/index.html",
+    "main.aa728616.css.map": "/clouDNote--A-MERN-notebook-app/static/css/main.aa728616.css.map",
+    "main.f987bf1c.js.map": "/clouDNote--A-MERN-notebook-app/static/js/main.f987bf1c.js.map",
+    "787.4b05f94a.chunk.js.map": "/clouDNote--A-MERN-notebook-app/static/js/787.4b05f94a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa728616.css",
+    "static/js/main.f987bf1c.js"
+  ]
+}
